@@ -1,40 +1,283 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stage 3</title>
-<script>
-const BOOKS = {
- "s3-1": {title:"On the Sand", words:["sand","hat","boat"]},
- "s3-2": {title:"Egg Hunt", words:["egg","cake","tree"]}
-};
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stage 3 Vocabulary</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
 
-function speak(t){
- speechSynthesis.cancel();
- let u=new SpeechSynthesisUtterance(t);
- u.rate=0.8;
- speechSynthesis.speak(u);
-}
+    h1 {
+      margin-bottom: 10px;
+    }
 
-window.onload=function(){
- const p=new URLSearchParams(location.search);
- const b=p.get("book");
- const book=BOOKS[b];
- if(!book) return;
- document.getElementById("title").innerText=book.title;
- const list=document.getElementById("list");
- book.words.forEach(w=>{
-  let d=document.createElement("div");
-  d.innerText=w;
-  d.onclick=()=>speak(w);
-  list.appendChild(d);
- });
-}
-</script>
+    h2 {
+      margin-top: 0;
+      color: #444;
+      font-size: 1.1rem;
+      font-weight: normal;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 20px;
+      text-decoration: none;
+      color: #0066cc;
+    }
+
+    .book-list,
+    .word-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .book-item,
+    .word-item {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 14px 16px;
+      background: #fafafa;
+    }
+
+    .book-item a {
+      text-decoration: none;
+      color: #222;
+      display: block;
+      font-weight: bold;
+    }
+
+    .book-id {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 4px;
+    }
+
+    .word-item {
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .word-item:hover {
+      background: #f0f7ff;
+    }
+
+    .word-en {
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    .word-ko {
+      color: #666;
+      margin-top: 4px;
+    }
+
+    .guide {
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 16px;
+    }
+  </style>
 </head>
 <body>
-<h1 id="title"></h1>
-<div id="list"></div>
+  <a class="back-link" href="index.html">← Home</a>
+  <h1 id="title">Stage 3 Vocabulary</h1>
+  <h2 id="subtitle"></h2>
+  <div id="content"></div>
+
+  <script>
+    const BOOKS = {
+      "s3-2-1": {
+        title: "On the Sand",
+        words: [
+          { en: "sand", ko: "모래" },
+          { en: "sleep", ko: "잠자다" },
+          { en: "sandcastle", ko: "모래성" },
+          { en: "hat", ko: "모자" },
+          { en: "top", ko: "맨 위, 꼭대기" },
+          { en: "ice cream", ko: "아이스크림" },
+          { en: "donkeys", ko: "당나귀들" },
+          { en: "boat", ko: "보트" },
+          { en: "go-karts", ko: "고카트들" },
+          { en: "hiding", ko: "숨어 있는, 숨어 있기" }
+        ]
+      },
+
+      "s3-2-2": {
+        title: "The Egg Hunt",
+        words: [
+          { en: "came", ko: "왔다" },
+          { en: "made", ko: "만들었다" },
+          { en: "cake", ko: "케이크" },
+          { en: "eggs", ko: "달걀들" },
+          { en: "idea", ko: "생각" },
+          { en: "park", ko: "공원" },
+          { en: "trees", ko: "나무들" },
+          { en: "flowers", ko: "꽃들" },
+          { en: "squirrels", ko: "다람쥐들" },
+          { en: "looked", ko: "보았다" }
+        ]
+      },
+
+      "s3-2-3": {
+        title: "Nobody Wanted to Play",
+        words: [
+          { en: "park", ko: "공원" },
+          { en: "rocket", ko: "로켓" },
+          { en: "see-saw", ko: "시소" },
+          { en: "horse", ko: "말" },
+          { en: "bicycle", ko: "자전거" },
+          { en: "ladder", ko: "사다리" },
+          { en: "wall", ko: "벽" },
+          { en: "spaceman", ko: "우주인" },
+          { en: "juggler", ko: "저글러" },
+          { en: "cowboy", ko: "카우보이" }
+        ]
+      },
+
+      "s3-2-4": {
+        title: "A Cat in the Tree",
+        words: [
+          { en: "barked", ko: "짖었다" },
+          { en: "climbed up", ko: "위로 올라갔다" },
+          { en: "climbed down", ko: "아래로 내려갔다" },
+          { en: "tree", ko: "나무" },
+          { en: "wall", ko: "벽" },
+          { en: "ladder", ko: "사다리" },
+          { en: "put", ko: "놓았다" },
+          { en: "jumped", ko: "뛰어내렸다" },
+          { en: "fireman", ko: "소방관" },
+          { en: "everyone", ko: "모두" }
+        ]
+      },
+
+      "s3-2-5": {
+        title: "The Rope Swing",
+        words: [
+          { en: "children", ko: "아이들" },
+          { en: "stream", ko: "개울" },
+          { en: "swing", ko: "그네" },
+          { en: "rope", ko: "밧줄" },
+          { en: "climbed", ko: "올라갔다" },
+          { en: "pushed", ko: "밀었다" },
+          { en: "looked", ko: "보았다" },
+          { en: "barked", ko: "짖었다" },
+          { en: "went", ko: "갔다" },
+          { en: "home", ko: "집" }
+        ]
+      },
+
+      "s3-2-6": {
+        title: "By the Stream",
+        words: [
+          { en: "rug", ko: "돗자리" },
+          { en: "stream", ko: "개울" },
+          { en: "bridge", ko: "다리" },
+          { en: "sticks", ko: "나뭇가지들" },
+          { en: "water", ko: "물" },
+          { en: "climbed", ko: "올라갔다" },
+          { en: "dropped", ko: "떨어뜨렸다" },
+          { en: "fell", ko: "떨어졌다" },
+          { en: "Teddy", ko: "테디 인형" },
+          { en: "get", ko: "가져오다" }
+        ]
+      }
+    };
+
+    function speak(text) {
+      speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.rate = 0.8;
+      speechSynthesis.speak(utterance);
+    }
+
+    function sortBookIds(ids) {
+      return ids.sort((a, b) => {
+        const pa = a.split("-").map(v => isNaN(v) ? v : Number(v.replace(/[^\d]/g, "")));
+        const pb = b.split("-").map(v => isNaN(v) ? v : Number(v.replace(/[^\d]/g, "")));
+
+        const aStage = Number(pa[0].replace("s", ""));
+        const bStage = Number(pb[0].replace("s", ""));
+        const aSet = Number(pa[1]);
+        const bSet = Number(pb[1]);
+        const aOrder = Number(pa[2]);
+        const bOrder = Number(pb[2]);
+
+        if (aStage !== bStage) return aStage - bStage;
+        if (aSet !== bSet) return aSet - bSet;
+        return aOrder - bOrder;
+      });
+    }
+
+    function renderBookList() {
+      const title = document.getElementById("title");
+      const subtitle = document.getElementById("subtitle");
+      const content = document.getElementById("content");
+
+      title.innerText = "Stage 3 Vocabulary";
+      subtitle.innerText = "Book List";
+      content.innerHTML = `
+        <p class="guide">책을 선택하면 해당 어휘 페이지로 이동합니다.</p>
+        <div class="book-list" id="book-list"></div>
+      `;
+
+      const list = document.getElementById("book-list");
+      const ids = sortBookIds(Object.keys(BOOKS));
+
+      ids.forEach(id => {
+        const item = document.createElement("div");
+        item.className = "book-item";
+        item.innerHTML = `
+          <div class="book-id">${id.toUpperCase()}</div>
+          <a href="stage3.html?book=${id}">${BOOKS[id].title}</a>
+        `;
+        list.appendChild(item);
+      });
+    }
+
+    function renderBook(bookId) {
+      const book = BOOKS[bookId];
+      const title = document.getElementById("title");
+      const subtitle = document.getElementById("subtitle");
+      const content = document.getElementById("content");
+
+      if (!book) {
+        renderBookList();
+        return;
+      }
+
+      title.innerText = book.title;
+      subtitle.innerText = bookId.toUpperCase();
+      content.innerHTML = `
+        <p class="guide">단어를 누르면 발음이 재생됩니다.</p>
+        <div class="word-list" id="word-list"></div>
+      `;
+
+      const list = document.getElementById("word-list");
+
+      book.words.forEach(word => {
+        const item = document.createElement("div");
+        item.className = "word-item";
+        item.innerHTML = `
+          <div class="word-en">${word.en}</div>
+          <div class="word-ko">${word.ko}</div>
+        `;
+        item.addEventListener("click", () => speak(word.en));
+        list.appendChild(item);
+      });
+    }
+
+    window.onload = function () {
+      const params = new URLSearchParams(location.search);
+      const bookId = params.get("book");
+      renderBook(bookId);
+    };
+  </script>
 </body>
 </html>
