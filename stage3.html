@@ -3,45 +3,163 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stage 3 Flash Cards</title>
+  <title>Stage 3 Flashcards</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      max-width: 820px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 20px;
+      background: #f6f7fb;
+      color: #222;
       text-align: center;
-      background: #f7f8fb;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .topbar a {
+      text-decoration: none;
+      color: #2563eb;
+      font-weight: bold;
     }
 
     h1 {
-      margin-bottom: 8px;
+      margin: 8px 0 4px;
+      font-size: 1.8rem;
     }
 
     h2 {
-      margin-top: 0;
-      color: #555;
+      margin: 0 0 10px;
       font-size: 1rem;
+      color: #666;
       font-weight: normal;
-    }
-
-    .top-link {
-      display: inline-block;
-      margin-bottom: 16px;
-      color: #0066cc;
-      text-decoration: none;
     }
 
     .guide {
       color: #666;
       font-size: 0.95rem;
+      margin-bottom: 16px;
+    }
+
+    .toolbar {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
       margin-bottom: 18px;
+    }
+
+    button, select {
+      border: none;
+      border-radius: 12px;
+      padding: 10px 14px;
+      font-size: 0.98rem;
+    }
+
+    button {
+      cursor: pointer;
+      background: #2563eb;
+      color: white;
+    }
+
+    button.secondary {
+      background: #6b7280;
+    }
+
+    button.green {
+      background: #059669;
+    }
+
+    button:disabled {
+      opacity: 0.45;
+      cursor: default;
+    }
+
+    select {
+      border: 1px solid #d1d5db;
+      background: white;
+      color: #222;
+    }
+
+    .card-stage {
+      margin-top: 12px;
+    }
+
+    .card-wrap {
+      width: 360px;
+      max-width: 90vw;
+      height: 240px;
+      margin: 0 auto 18px;
+      perspective: 1200px;
+    }
+
+    .card {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.55s ease;
+      cursor: pointer;
+    }
+
+    .card.flipped {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      position: absolute;
+      inset: 0;
+      backface-visibility: hidden;
+      border-radius: 22px;
+      background: white;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+
+    .card-front {
+      font-size: 2rem;
+      font-weight: bold;
+      line-height: 1.25;
+    }
+
+    .card-back {
+      transform: rotateY(180deg);
+      font-size: 1.6rem;
+      font-weight: bold;
+      line-height: 1.5;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .counter {
+      color: #666;
+      font-size: 0.95rem;
+      margin-top: 8px;
     }
 
     .book-list {
       display: grid;
       gap: 12px;
       margin-top: 20px;
+      text-align: left;
     }
 
     .book-item {
@@ -49,7 +167,6 @@
       border: 1px solid #ddd;
       border-radius: 14px;
       padding: 14px;
-      text-align: left;
     }
 
     .book-item a {
@@ -64,99 +181,15 @@
       color: #777;
       margin-bottom: 4px;
     }
-
-    .card-wrap {
-      perspective: 1200px;
-      width: 320px;
-      height: 220px;
-      margin: 24px auto 18px;
-    }
-
-    .card {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      transform-style: preserve-3d;
-      transition: transform 0.6s;
-      cursor: pointer;
-    }
-
-    .card.flipped {
-      transform: rotateY(180deg);
-    }
-
-    .card-face {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      border-radius: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      box-sizing: border-box;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-      background: white;
-      border: 1px solid #e5e5e5;
-    }
-
-    .card-front {
-      font-size: 2rem;
-      font-weight: bold;
-      color: #222;
-    }
-
-    .card-back {
-      transform: rotateY(180deg);
-      font-size: 1.7rem;
-      font-weight: bold;
-      color: #333;
-      line-height: 1.5;
-    }
-
-    .controls {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-top: 10px;
-    }
-
-    button {
-      border: none;
-      border-radius: 12px;
-      padding: 12px 16px;
-      font-size: 1rem;
-      cursor: pointer;
-      background: #2563eb;
-      color: white;
-    }
-
-    button.secondary {
-      background: #6b7280;
-    }
-
-    button.light {
-      background: #10b981;
-    }
-
-    button:disabled {
-      opacity: 0.45;
-      cursor: default;
-    }
-
-    .counter {
-      margin-top: 14px;
-      font-size: 0.95rem;
-      color: #666;
-    }
   </style>
 </head>
 <body>
-  <a class="top-link" href="index.html">← Home</a>
+  <div class="topbar">
+    <a href="index.html">← Home</a>
+    <a href="stage3.html">Book List</a>
+  </div>
 
-  <h1 id="title">Stage 3 Flash Cards</h1>
+  <h1 id="title">Stage 3 Flashcards</h1>
   <h2 id="subtitle"></h2>
   <div id="content"></div>
 
@@ -254,10 +287,18 @@
       }
     };
 
+    const synth = window.speechSynthesis;
     let voices = [];
+    let englishVoices = [];
+    let koreanVoices = [];
+
     let currentBookId = null;
+    let deck = [];
     let currentIndex = 0;
     let flipped = false;
+    let autoPlay = false;
+    let autoTimer = null;
+    let frontMode = "en"; // en or ko
 
     function sortBookIds(ids) {
       return ids.sort((a, b) => {
@@ -275,64 +316,114 @@
       });
     }
 
-    function loadVoices() {
-      voices = speechSynthesis.getVoices();
+    function shuffleArray(arr) {
+      const copy = [...arr];
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
     }
 
-    function pickVoice(langPrefix, preferredNames = []) {
-      const langVoices = voices.filter(v => v.lang && v.lang.toLowerCase().startsWith(langPrefix.toLowerCase()));
-      for (const name of preferredNames) {
-        const found = langVoices.find(v => v.name.toLowerCase().includes(name.toLowerCase()));
+    function normalizeName(s) {
+      return (s || "").toLowerCase();
+    }
+
+    function loadVoices() {
+      voices = synth.getVoices();
+
+      englishVoices = voices.filter(v =>
+        (v.lang || "").toLowerCase().startsWith("en")
+      );
+
+      koreanVoices = voices.filter(v =>
+        (v.lang || "").toLowerCase().startsWith("ko")
+      );
+    }
+
+    function pickBestEnglishVoice() {
+      if (!englishVoices.length) return null;
+
+      const priority = [
+        "microsoft aria online",
+        "microsoft guy online",
+        "microsoft jenny online",
+        "google us english",
+        "google uk english female",
+        "samantha",
+        "daniel",
+        "microsoft aria",
+        "microsoft guy",
+        "zira"
+      ];
+
+      for (const key of priority) {
+        const found = englishVoices.find(v => normalizeName(v.name).includes(key));
         if (found) return found;
       }
-      return langVoices[0] || null;
+
+      const usVoice = englishVoices.find(v => (v.lang || "").toLowerCase().includes("en-us"));
+      if (usVoice) return usVoice;
+
+      return englishVoices[0];
     }
 
-    function speakText(text, lang) {
-      speechSynthesis.cancel();
+    function pickBestKoreanVoice() {
+      if (!koreanVoices.length) return null;
 
-      const u = new SpeechSynthesisUtterance(text);
-      u.lang = lang;
+      const priority = [
+        "microsoft sunhi",
+        "google 한국의",
+        "yuna"
+      ];
 
-      if (lang.startsWith("en")) {
-        u.rate = 0.78;
-        u.pitch = 1.0;
-        const voice = pickVoice("en", [
-          "google us english",
-          "google uk english female",
-          "samantha",
-          "daniel",
-          "microsoft aria",
-          "microsoft guy",
-          "zira"
-        ]);
-        if (voice) u.voice = voice;
-      } else if (lang.startsWith("ko")) {
-        u.rate = 0.95;
-        u.pitch = 1.0;
-        const voice = pickVoice("ko", [
-          "google 한국의",
-          "microsoft sunhi",
-          "yuna"
-        ]);
-        if (voice) u.voice = voice;
+      for (const key of priority) {
+        const found = koreanVoices.find(v => normalizeName(v.name).includes(key));
+        if (found) return found;
       }
 
-      speechSynthesis.speak(u);
+      return koreanVoices[0];
+    }
+
+    function speakFront() {
+      const word = deck[currentIndex];
+      const u = new SpeechSynthesisUtterance(frontMode === "en" ? word.en : word.ko);
+      u.lang = frontMode === "en" ? "en-US" : "ko-KR";
+      u.rate = frontMode === "en" ? 0.72 : 0.95;
+      u.pitch = 1;
+      u.voice = frontMode === "en" ? pickBestEnglishVoice() : pickBestKoreanVoice();
+      synth.cancel();
+      synth.speak(u);
+    }
+
+    function speakBack() {
+      const word = deck[currentIndex];
+      const u = new SpeechSynthesisUtterance(frontMode === "en" ? word.ko : word.en);
+      u.lang = frontMode === "en" ? "ko-KR" : "en-US";
+      u.rate = frontMode === "en" ? 0.95 : 0.72;
+      u.pitch = 1;
+      u.voice = frontMode === "en" ? pickBestKoreanVoice() : pickBestEnglishVoice();
+      synth.cancel();
+      synth.speak(u);
+    }
+
+    function stopAutoPlay() {
+      autoPlay = false;
+      if (autoTimer) {
+        clearTimeout(autoTimer);
+        autoTimer = null;
+      }
     }
 
     function renderBookList() {
-      const title = document.getElementById("title");
-      const subtitle = document.getElementById("subtitle");
-      const content = document.getElementById("content");
-
-      title.innerText = "Stage 3 Flash Cards";
-      subtitle.innerText = "Book List";
+      stopAutoPlay();
+      document.getElementById("title").innerText = "Stage 3 Flashcards";
+      document.getElementById("subtitle").innerText = "Book List";
 
       const ids = sortBookIds(Object.keys(BOOKS));
 
-      content.innerHTML = `
-        <div class="guide">책을 선택하면 플래시카드 학습으로 이동합니다.</div>
+      document.getElementById("content").innerHTML = `
+        <div class="guide">책을 선택하면 플래시카드 학습이 시작됩니다.</div>
         <div class="book-list">
           ${ids.map(id => `
             <div class="book-item">
@@ -346,97 +437,166 @@
 
     function renderCard() {
       const book = BOOKS[currentBookId];
-      const word = book.words[currentIndex];
+      const word = deck[currentIndex];
 
       document.getElementById("title").innerText = book.title;
-      document.getElementById("subtitle").innerText = currentBookId.toUpperCase();
+      document.getElementById("subtitle").innerText = `${currentBookId.toUpperCase()} · ${currentIndex + 1} / ${deck.length}`;
+
+      const frontText = frontMode === "en" ? word.en : word.ko;
+      const backText = frontMode === "en" ? word.ko : word.en;
 
       document.getElementById("content").innerHTML = `
-        <div class="guide">카드를 누르면 뜻이 보입니다. 앞면은 영어, 뒷면은 한국어입니다.</div>
+        <div class="guide">카드를 누르면 뒤집힙니다. 아래 버튼으로 이동하거나, Shuffle과 Auto Play를 사용할 수 있습니다.</div>
 
-        <div class="card-wrap">
-          <div class="card ${flipped ? "flipped" : ""}" id="flashcard">
-            <div class="card-face card-front">${word.en}</div>
-            <div class="card-face card-back">${word.ko}</div>
+        <div class="toolbar">
+          <button class="secondary" id="shuffleBtn">Shuffle</button>
+          <button class="green" id="autoBtn">${autoPlay ? "Stop Auto" : "Auto Play"}</button>
+          <button class="secondary" id="replayBtn">Replay</button>
+          <select id="frontModeSelect">
+            <option value="en" ${frontMode === "en" ? "selected" : ""}>영어 먼저</option>
+            <option value="ko" ${frontMode === "ko" ? "selected" : ""}>뜻 먼저</option>
+          </select>
+        </div>
+
+        <div class="card-stage">
+          <div class="card-wrap">
+            <div class="card ${flipped ? "flipped" : ""}" id="flashcard">
+              <div class="card-face card-front">${frontText}</div>
+              <div class="card-face card-back">${backText}</div>
+            </div>
           </div>
         </div>
 
-        <div class="controls">
+        <div class="nav">
           <button class="secondary" id="prevBtn" ${currentIndex === 0 ? "disabled" : ""}>이전</button>
-          <button class="light" id="playBtn">다시 듣기</button>
           <button class="secondary" id="flipBtn">뒤집기</button>
-          <button id="nextBtn" ${currentIndex === book.words.length - 1 ? "disabled" : ""}>다음</button>
+          <button id="nextBtn" ${currentIndex === deck.length - 1 ? "disabled" : ""}>다음</button>
         </div>
 
-        <div class="counter">${currentIndex + 1} / ${book.words.length}</div>
+        <div class="counter">${currentIndex + 1} / ${deck.length}</div>
       `;
 
       document.getElementById("flashcard").addEventListener("click", flipCard);
       document.getElementById("flipBtn").addEventListener("click", flipCard);
       document.getElementById("prevBtn").addEventListener("click", prevCard);
       document.getElementById("nextBtn").addEventListener("click", nextCard);
-      document.getElementById("playBtn").addEventListener("click", replayAudio);
+      document.getElementById("shuffleBtn").addEventListener("click", shuffleDeck);
+      document.getElementById("replayBtn").addEventListener("click", replayCurrent);
+      document.getElementById("autoBtn").addEventListener("click", toggleAutoPlay);
+      document.getElementById("frontModeSelect").addEventListener("change", changeFrontMode);
     }
 
-    function playFrontAudio() {
-      const book = BOOKS[currentBookId];
-      const word = book.words[currentIndex];
-      speakText(word.en, "en-US");
-    }
-
-    function playBackAudio() {
-      const book = BOOKS[currentBookId];
-      const word = book.words[currentIndex];
-      speakText(word.ko, "ko-KR");
-    }
-
-    function replayAudio() {
+    function replayCurrent() {
       if (flipped) {
-        playBackAudio();
+        speakBack();
       } else {
-        playFrontAudio();
+        speakFront();
       }
     }
 
     function flipCard() {
       flipped = !flipped;
-      const card = document.getElementById("flashcard");
-      card.classList.toggle("flipped", flipped);
+      document.getElementById("flashcard").classList.toggle("flipped", flipped);
 
       setTimeout(() => {
-        if (flipped) {
-          playBackAudio();
-        } else {
-          playFrontAudio();
-        }
-      }, 260);
+        if (flipped) speakBack();
+        else speakFront();
+      }, 240);
     }
 
     function nextCard() {
-      const book = BOOKS[currentBookId];
-      if (currentIndex < book.words.length - 1) {
-        currentIndex++;
-        flipped = false;
-        renderCard();
-        setTimeout(playFrontAudio, 150);
-      }
+      stopAutoPlay();
+      goNext();
     }
 
     function prevCard() {
+      stopAutoPlay();
+      goPrev();
+    }
+
+    function goNext() {
+      if (currentIndex < deck.length - 1) {
+        currentIndex++;
+        flipped = false;
+        renderCard();
+        setTimeout(speakFront, 180);
+      }
+    }
+
+    function goPrev() {
       if (currentIndex > 0) {
         currentIndex--;
         flipped = false;
         renderCard();
-        setTimeout(playFrontAudio, 150);
+        setTimeout(speakFront, 180);
       }
     }
 
-    window.onload = function () {
-      loadVoices();
-      if (speechSynthesis.onvoiceschanged !== undefined) {
-        speechSynthesis.onvoiceschanged = loadVoices;
-      }
+    function shuffleDeck() {
+      stopAutoPlay();
+      deck = shuffleArray(deck);
+      currentIndex = 0;
+      flipped = false;
+      renderCard();
+      setTimeout(speakFront, 180);
+    }
 
+    function toggleAutoPlay() {
+      autoPlay = !autoPlay;
+      renderCard();
+      if (autoPlay) {
+        runAutoPlay();
+      } else if (autoTimer) {
+        clearTimeout(autoTimer);
+        autoTimer = null;
+      }
+    }
+
+    function runAutoPlay() {
+      if (!autoPlay) return;
+
+      flipped = false;
+      renderCard();
+      speakFront();
+
+      autoTimer = setTimeout(() => {
+        if (!autoPlay) return;
+        flipped = true;
+        renderCard();
+        speakBack();
+
+        autoTimer = setTimeout(() => {
+          if (!autoPlay) return;
+          if (currentIndex < deck.length - 1) {
+            currentIndex++;
+            runAutoPlay();
+          } else {
+            autoPlay = false;
+            renderCard();
+          }
+        }, 1800);
+      }, 1600);
+    }
+
+    function changeFrontMode(e) {
+      stopAutoPlay();
+      frontMode = e.target.value;
+      flipped = false;
+      renderCard();
+      setTimeout(speakFront, 180);
+    }
+
+    function initBook(bookId) {
+      currentBookId = bookId;
+      deck = [...BOOKS[bookId].words];
+      currentIndex = 0;
+      flipped = false;
+      renderCard();
+      setTimeout(speakFront, 300);
+    }
+
+    function startApp() {
+      loadVoices();
       const params = new URLSearchParams(location.search);
       const bookId = params.get("book");
 
@@ -445,13 +605,27 @@
         return;
       }
 
-      currentBookId = bookId;
-      currentIndex = 0;
-      flipped = false;
-      renderCard();
+      initBook(bookId);
+    }
 
-      setTimeout(playFrontAudio, 300);
+    window.onload = () => {
+      startApp();
+      if (typeof synth.addEventListener === "function") {
+        synth.addEventListener("voiceschanged", loadVoices);
+      } else if (synth.onvoiceschanged !== undefined) {
+        synth.onvoiceschanged = loadVoices;
+      }
     };
+
+    document.addEventListener("keydown", (e) => {
+      if (!currentBookId) return;
+      if (e.key === "ArrowRight") nextCard();
+      if (e.key === "ArrowLeft") prevCard();
+      if (e.key === " " || e.key === "Enter") {
+        e.preventDefault();
+        flipCard();
+      }
+    });
   </script>
 </body>
 </html>
