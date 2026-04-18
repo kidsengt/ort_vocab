@@ -207,10 +207,10 @@
 
   <script>
     const BOOKS = {
-      ...STAGE3_BOOKS,
-      ...STAGE4_BOOKS,
-      ...STAGE5_BOOKS,
-      ...STAGE6_BOOKS
+      ...(typeof STAGE3_BOOKS !== "undefined" ? STAGE3_BOOKS : {}),
+      ...(typeof STAGE4_BOOKS !== "undefined" ? STAGE4_BOOKS : {}),
+      ...(typeof STAGE5_BOOKS !== "undefined" ? STAGE5_BOOKS : {}),
+      ...(typeof STAGE6_BOOKS !== "undefined" ? STAGE6_BOOKS : {})
     };
 
     const synth = window.speechSynthesis;
@@ -281,6 +281,8 @@
     }
 
     function speakFront() {
+      if (!deck.length) return;
+
       const word = deck[currentIndex];
       const text = frontMode === "en" ? word.en : word.ko;
       const lang = frontMode === "en" ? "en-US" : "ko-KR";
@@ -296,6 +298,8 @@
     }
 
     function speakBack() {
+      if (!deck.length) return;
+
       const word = deck[currentIndex];
       const text = frontMode === "en" ? word.ko : word.en;
       const lang = frontMode === "en" ? "ko-KR" : "en-US";
