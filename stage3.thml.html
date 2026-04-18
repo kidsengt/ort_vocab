@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stage 3</title>
+<script>
+const BOOKS = {
+ "s3-1": {title:"On the Sand", words:["sand","hat","boat"]},
+ "s3-2": {title:"Egg Hunt", words:["egg","cake","tree"]}
+};
+
+function speak(t){
+ speechSynthesis.cancel();
+ let u=new SpeechSynthesisUtterance(t);
+ u.rate=0.8;
+ speechSynthesis.speak(u);
+}
+
+window.onload=function(){
+ const p=new URLSearchParams(location.search);
+ const b=p.get("book");
+ const book=BOOKS[b];
+ if(!book) return;
+ document.getElementById("title").innerText=book.title;
+ const list=document.getElementById("list");
+ book.words.forEach(w=>{
+  let d=document.createElement("div");
+  d.innerText=w;
+  d.onclick=()=>speak(w);
+  list.appendChild(d);
+ });
+}
+</script>
+</head>
+<body>
+<h1 id="title"></h1>
+<div id="list"></div>
+</body>
+</html>
