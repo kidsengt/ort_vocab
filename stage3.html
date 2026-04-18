@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Stage 3</title>
+
+<style>
+body { font-family: sans-serif; text-align: center; }
+.book { margin: 10px; padding: 10px; border: 1px solid #ccc; cursor: pointer; }
+.word { margin: 5px; }
+</style>
+
+<script>
+function showWords(bookId){
+  document.querySelectorAll('.words').forEach(e => e.style.display='none');
+  document.getElementById(bookId).style.display='block';
+}
+
+function speak(text){
+  speechSynthesis.cancel();
+  let utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = 'en-US';
+  utterance.rate = 0.8;
+  speechSynthesis.speak(utterance);
+}
+</script>
+
+</head>
+
+<body>
+
+<h1>Stage 3</h1>
+
+<div class="book" onclick="showWords('b1')">On the Sand</div>
+<div class="book" onclick="showWords('b2')">The Egg Hunt</div>
+<div class="book" onclick="showWords('b3')">Nobody Wanted to Play</div>
+<div class="book" onclick="showWords('b4')">A Cat in the Tree</div>
+<div class="book" onclick="showWords('b5')">The Rope Swing</div>
+<div class="book" onclick="showWords('b6')">By the Stream</div>
+
+<hr>
+
+<!-- BOOK 1 -->
+<div id="b1" class="words" style="display:none;">
+  <div class="word" onclick="speak('sand')">sand — 모래</div>
+  <div class="word" onclick="speak('sleep')">sleep — 잠자다</div>
+  <div class="word" onclick="speak('sandcastle')">sandcastle — 모래성</div>
+  <div class="word" onclick="speak('hat')">hat — 모자</div>
+  <div class="word" onclick="speak('top')">top — 꼭대기</div>
+  <div class="word" onclick="speak('ice cream')">ice cream — 아이스크림</div>
+  <div class="word" onclick="speak('donkeys')">donkeys — 당나귀들</div>
+  <div class="word" onclick="speak('boat')">boat — 보트</div>
+  <div class="word" onclick="speak('go karts')">go-karts — 고카트들</div>
+  <div class="word" onclick="speak('hiding')">hiding — 숨어 있는</div>
+</div>
+
+<!-- BOOK 2 -->
+<div id="b2" class="words" style="display:none;">
+  <div class="word" onclick="speak('came')">came — 왔다</div>
+  <div class="word" onclick="speak('made')">made — 만들었다</div>
+  <div class="word" onclick="speak('cake')">cake — 케이크</div>
+  <div class="word" onclick="speak('eggs')">eggs — 달걀들</div>
+  <div class="word" onclick="speak('idea')">idea — 생각</div>
+  <div class="word" onclick="speak('park')">park — 공원</div>
+  <div class="word" onclick="speak('trees')">trees — 나무들</div>
+  <div class="word" onclick="speak('flowers')">flowers — 꽃들</div>
+  <div class="word" onclick="speak('squirrels')">squirrels — 다람쥐들</div>
+  <div class="word" onclick="speak('looked')">looked — 보았다</div>
+</div>
+
+<!-- BOOK 3 -->
+<div id="b3" class="words" style="display:none;">
+  <div class="word" onclick="speak('park')">park — 공원</div>
+  <div class="word" onclick="speak('rocket')">rocket — 로켓</div>
+  <div class="word" onclick="speak('see saw')">see-saw — 시소</div>
+  <div class="word" onclick="speak('horse')">horse — 말</div>
+  <div class="word" onclick="speak('bicycle')">bicycle — 자전거</div>
+  <div class="word" onclick="speak('ladder')">ladder — 사다리</div>
+  <div class="word" onclick="speak('wall')">wall — 벽</div>
+  <div class="word" onclick="speak('spaceman')">spaceman — 우주인</div>
+  <div class="word" onclick="speak('juggler')">juggler — 저글러</div>
+  <div class="word" onclick="speak('cowboy')">cowboy — 카우보이</div>
+</div>
+
+<!-- BOOK 4 -->
+<div id="b4" class="words" style="display:none;">
+  <div class="word" onclick="speak('barked')">barked — 짖었다</div>
+  <div class="word" onclick="speak('climbed')">climbed — 올라갔다</div>
+  <div class="word" onclick="speak('tree')">tree — 나무</div>
+  <div class="word" onclick="speak('wall')">wall — 벽</div>
+  <div class="word" onclick="speak('ladder')">ladder — 사다리</div>
+  <div class="word" onclick="speak('put')">put — 놓았다</div>
+  <div class="word" onclick="speak('jumped')">jumped — 뛰어내렸다</div>
+  <div class="word" onclick="speak('fireman')">fireman — 소방관</div>
+  <div class="word" onclick="speak('everyone')">everyone — 모두</div>
+</div>
+
+<!-- BOOK 5 -->
+<div id="b5" class="words" style="display:none;">
+  <div class="word" onclick="speak('children')">children — 아이들</div>
+  <div class="word" onclick="speak('stream')">stream — 개울</div>
+  <div class="word" onclick="speak('swing')">swing — 그네</div>
+  <div class="word" onclick="speak('rope')">rope — 밧줄</div>
+  <div class="word" onclick="speak('climbed')">climbed — 올라갔다</div>
+  <div class="word" onclick="speak('pushed')">pushed — 밀었다</div>
+  <div class="word" onclick="speak('looked')">looked — 보았다</div>
+  <div class="word" onclick="speak('barked')">barked — 짖었다</div>
+  <div class="word" onclick="speak('went')">went — 갔다</div>
+  <div class="word" onclick="speak('home')">home — 집</div>
+</div>
+
+<!-- BOOK 6 -->
+<div id="b6" class="words" style="display:none;">
+  <div class="word" onclick="speak('rug')">rug — 돗자리</div>
+  <div class="word" onclick="speak('stream')">stream — 개울</div>
+  <div class="word" onclick="speak('bridge')">bridge — 다리</div>
+  <div class="word" onclick="speak('sticks')">sticks — 나뭇가지들</div>
+  <div class="word" onclick="speak('water')">water — 물</div>
+  <div class="word" onclick="speak('climbed')">climbed — 올라갔다</div>
+  <div class="word" onclick="speak('dropped')">dropped — 떨어뜨렸다</div>
+  <div class="word" onclick="speak('fell')">fell — 떨어졌다</div>
+  <div class="word" onclick="speak('teddy')">teddy — 테디 인형</div>
+  <div class="word" onclick="speak('get')">get — 가져오다</div>
+</div>
+
+</body>
+</html>
