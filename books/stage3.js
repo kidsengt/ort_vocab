@@ -111,5 +111,119 @@ const STAGE3_BOOKS = {
       { en: "Teddy", ko: "테디 인형" },
       { en: "get", ko: "가져오다" }
     ]
-  }
+  },
+  
+"s3-3-1": {
+  stage: 3,
+  unit: 3,
+  book: 1,
+  title: "Kipper the Clown",
+  words: [
+    { en: "put on", ko: "(행사를) 열다" },
+    { en: "circus", ko: "서커스" },
+    { en: "clown", ko: "광대" },
+    { en: "pulled", ko: "잡아당겼다" },
+    { en: "leg", ko: "다리" },
+    { en: "gymnastics", ko: "체조" },
+    { en: "drink", ko: "음료" },
+    { en: "looked", ko: "보았다" },
+    { en: "stuntman", ko: "스턴트맨" },
+    { en: "fed up", ko: "지긋지긋한, 질린" }
+  ]
+},
+
+"s3-3-2": {
+  stage: 3,
+  unit: 3,
+  book: 2,
+  title: "Strawberry Jam",
+  words: [
+    { en: "strawberries", ko: "딸기들" },
+    { en: "jam", ko: "잼" },
+    { en: "picked", ko: "땄다" },
+    { en: "pocket", ko: "주머니" },
+    { en: "car", ko: "자동차" },
+    { en: "locked", ko: "잠겨 있었다" },
+    { en: "forgot", ko: "잊었다" },
+    { en: "ice cream", ko: "아이스크림" },
+    { en: "home", ko: "집" },
+    { en: "ran over", ko: "깔고 지나갔다" }
+  ]
+},
+
+"s3-3-3": {
+  stage: 3,
+  unit: 3,
+  book: 3,
+  title: "The Jumble Sale",
+  words: [
+    { en: "drawer", ko: "서랍" },
+    { en: "threw", ko: "던졌다, 버렸다" },
+    { en: "junk", ko: "잡동사니" },
+    { en: "toys", ko: "장난감들" },
+    { en: "car", ko: "자동차" },
+    { en: "sad", ko: "슬픈" },
+    { en: "jumble sale", ko: "벼룩시장" },
+    { en: "buy", ko: "사다" },
+    { en: "money", ko: "돈" },
+    { en: "bags", ko: "가방들" }
+  ]
+},
+
+"s3-3-4": {
+  stage: 3,
+  unit: 3,
+  book: 4,
+  title: "At the Seaside",
+  words: [
+    { en: "holiday", ko: "휴가" },
+    { en: "hotel", ko: "호텔" },
+    { en: "expensive", ko: "비싼" },
+    { en: "full", ko: "가득 찬" },
+    { en: "home", ko: "집" },
+    { en: "car", ko: "자동차" },
+    { en: "tractor", ko: "트랙터" },
+    { en: "farmer", ko: "농부" },
+    { en: "bus", ko: "버스" },
+    { en: "help", ko: "돕다" }
+  ]
+},
+
+"s3-3-5": {
+  stage: 3,
+  unit: 3,
+  book: 5,
+  title: "Kipper's Idea",
+  words: [
+    { en: "school", ko: "학교" },
+    { en: "library", ko: "도서관" },
+    { en: "wall", ko: "벽" },
+    { en: "playground", ko: "놀이터" },
+    { en: "drawing", ko: "그림" },
+    { en: "mess", ko: "엉망인 상태" },
+    { en: "idea", ko: "생각" },
+    { en: "circles", ko: "동그라미들" },
+    { en: "faces", ko: "얼굴들" },
+    { en: "painted", ko: "칠했다" }
+  ]
+},
+
+"s3-3-6": {
+  stage: 3,
+  unit: 3,
+  book: 6,
+  title: "The Snowman",
+  words: [
+    { en: "snowball", ko: "눈덩이" },
+    { en: "snowman", ko: "눈사람" },
+    { en: "idea", ko: "생각" },
+    { en: "trick", ko: "장난" },
+    { en: "door", ko: "문" },
+    { en: "roof", ko: "지붕" },
+    { en: "photograph", ko: "사진" },
+    { en: "pushed", ko: "밀었다" },
+    { en: "made", ko: "만들었다" },
+    { en: "fell off", ko: "떨어졌다" }
+  ]
+}
 };
