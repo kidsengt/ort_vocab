@@ -15,6 +15,11 @@ words: [
 { en: "letter", ko: "편지" },
 { en: "idea", ko: "생각" },
 { en: "tickets", ko: "표들" }
+{ en: "prize", ko: "상" },
+{ en: "ride", ko: "타기" },
+{ en: "stream", ko: "개울" },
+{ en: "photograph", ko: "사진" },
+{ en: "present", ko: "선물" }
 ]
 },
 "s4-2-2": {
@@ -33,6 +38,11 @@ words: [
 { en: "watched", ko: "보았다" },
 { en: "laughed", ko: "웃었다" },
 { en: "tree house", ko: "나무집" }
+{ en: "burglars", ko: "도둑들" },
+{ en: "running away", ko: "도망가고 있는" },
+{ en: "police", ko: "경찰" },
+{ en: "caught", ko: "잡았다" },
+{ en: "phone", ko: "전화기" }
 ]
 },
 "s4-2-3": {
@@ -51,6 +61,11 @@ words: [
 { en: "job", ko: "일" },
 { en: "picnic", ko: "소풍" },
 { en: "began", ko: "시작되었다" }
+{ en: "rain", ko: "비" },
+{ en: "floated away", ko: "떠내려갔다" },
+{ en: "help", ko: "도와주다" },
+{ en: "fall in", ko: "빠지다" },
+{ en: "home", ko: "집" }
 ]
 },
 "s4-2-4": {
@@ -69,6 +84,11 @@ words: [
 { en: "shouted", ko: "소리쳤다" },
 { en: "last", ko: "마지막" },
 { en: "poor", ko: "불쌍한" }
+{ en: "disappointed", ko: "실망한" },
+{ en: "shame", ko: "안타까운 일" },
+{ en: "blindfold", ko: "눈가리개" },
+{ en: "surprise", ko: "놀라움" },
+{ en: "everyone", ko: "모두" }
 ]
 }  
 };
