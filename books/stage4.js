@@ -14,7 +14,7 @@ words: [
 { en: "computer", ko: "컴퓨터" },
 { en: "letter", ko: "편지" },
 { en: "idea", ko: "생각" },
-{ en: "tickets", ko: "표들" }
+{ en: "tickets", ko: "표들" },
 { en: "prize", ko: "상" },
 { en: "ride", ko: "타기" },
 { en: "stream", ko: "개울" },
@@ -37,7 +37,7 @@ words: [
 { en: "showed", ko: "보여주었다" },
 { en: "watched", ko: "보았다" },
 { en: "laughed", ko: "웃었다" },
-{ en: "tree house", ko: "나무집" }
+{ en: "tree house", ko: "나무집" },
 { en: "burglars", ko: "도둑들" },
 { en: "running away", ko: "도망가고 있는" },
 { en: "police", ko: "경찰" },
@@ -60,7 +60,7 @@ words: [
 { en: "wet", ko: "젖은" },
 { en: "job", ko: "일" },
 { en: "picnic", ko: "소풍" },
-{ en: "began", ko: "시작되었다" }
+{ en: "began", ko: "시작되었다" },
 { en: "rain", ko: "비" },
 { en: "floated away", ko: "떠내려갔다" },
 { en: "help", ko: "도와주다" },
@@ -83,7 +83,7 @@ words: [
 { en: "third", ko: "3등" },
 { en: "shouted", ko: "소리쳤다" },
 { en: "last", ko: "마지막" },
-{ en: "poor", ko: "불쌍한" }
+{ en: "poor", ko: "불쌍한" },
 { en: "disappointed", ko: "실망한" },
 { en: "shame", ko: "안타까운 일" },
 { en: "blindfold", ko: "눈가리개" },
