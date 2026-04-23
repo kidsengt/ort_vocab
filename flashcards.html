@@ -423,8 +423,7 @@
     }
 
     function replayCurrent() {
-      if (flipped) speakBack();
-      else speakFront();
+      speakFront();
     }
 
     function flipCard() {
@@ -432,8 +431,7 @@
       document.getElementById("flashcard").classList.toggle("flipped", flipped);
 
       setTimeout(() => {
-        if (flipped) speakBack();
-        else speakFront();
+        if (!flipped) speakFront();
       }, 240);
     }
 
@@ -496,7 +494,6 @@
         if (!autoPlay) return;
         flipped = true;
         renderCard();
-        speakBack();
 
         autoTimer = setTimeout(() => {
           if (!autoPlay) return;
