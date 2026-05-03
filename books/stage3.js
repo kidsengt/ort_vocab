@@ -1,4 +1,112 @@
 const STAGE3_BOOKS = {
+"s3-1-1": {
+stage: 3,
+unit: 1,
+book: 1,
+title: "The Duck Race",
+words: [
+{ en: "idea", ko: "생각" },
+{ en: "ducks", ko: "오리들" },
+{ en: "race", ko: "경주" },
+{ en: "stream", ko: "개울" },
+{ en: "sank", ko: "가라앉았다" },
+{ en: "got stuck", ko: "끼었다 / 걸렸다" },
+{ en: "began", ko: "시작했다" },
+{ en: "went", ko: "갔다" },
+{ en: "fast", ko: "빠르게" },
+{ en: "landed on", ko: "~위에 내려앉았다" }
+]
+},
+"s3-1-2": {
+stage: 3,
+unit: 1,
+book: 2,
+title: "Sniff",
+words: [
+{ en: "look after", ko: "돌보다" },
+{ en: "puppy", ko: "강아지" },
+{ en: "excited", ko: "신이 난" },
+{ en: "bark", ko: "짖다" },
+{ en: "ran after", ko: "~를 쫓아갔다" },
+{ en: "mud", ko: "진흙" },
+{ en: "pond", ko: "연못" },
+{ en: "rest", ko: "휴식" },
+{ en: "lost", ko: "길을 잃은" },
+{ en: "asleep", ko: "잠든" }
+]
+},
+"s3-1-3": {
+stage: 3,
+unit: 1,
+book: 3,
+title: "Pond Dipping",
+words: [
+{ en: "pond", ko: "연못" },
+{ en: "net", ko: "그물" },
+{ en: "stuck", ko: "끼었다 / 걸렸다" },
+{ en: "pulled", ko: "당겼다" },
+{ en: "stick", ko: "막대기" },
+{ en: "helped", ko: "도왔다" },
+{ en: "pram", ko: "유모차" },
+{ en: "hopped out", ko: "튀어나왔다" },
+{ en: "jumped up", ko: "뛰어올랐다" },
+{ en: "dipping", ko: "담그기" }
+]
+},
+"s3-1-4": {
+stage: 3,
+unit: 1,
+book: 4,
+title: "The Ice Rink",
+words: [
+{ en: "ice", ko: "얼음" },
+{ en: "rink", ko: "아이스링크" },
+{ en: "skates", ko: "스케이트" },
+{ en: "skate", ko: "스케이트를 타다" },
+{ en: "spin", ko: "돌다" },
+{ en: "jump", ko: "점프하다" },
+{ en: "sat down", ko: "넘어져 앉다" },
+{ en: "drinks", ko: "음료" },
+{ en: "look at", ko: "보다" },
+{ en: "banana skin", ko: "바나나 껍질" }
+]
+},
+"s3-1-5": {
+stage: 3,
+unit: 1,
+book: 5,
+title: "The Mud Bath",
+words: [
+{ en: "football", ko: "축구" },
+{ en: "fell over", ko: "넘어졌다" },
+{ en: "kick", ko: "차다" },
+{ en: "mess", ko: "엉망 / 난장판" },
+{ en: "bathroom", ko: "욕실" },
+{ en: "forgot", ko: "잊었다" },
+{ en: "looked at", ko: "바라보았다" },
+{ en: "came down", ko: "내려왔다" },
+{ en: "ran", ko: "달렸다" },
+{ en: "mud", ko: "진흙" }
+]
+},
+"s3-1-6": {
+stage: 3,
+unit: 1,
+book: 6,
+title: "The Steel Band",
+words: [
+{ en: "band", ko: "밴드" },
+{ en: "clap", ko: "박수를 치다" },
+{ en: "tap", ko: "톡톡 두드리다" },
+{ en: "drum", ko: "드럼" },
+{ en: "sing", ko: "노래하다" },
+{ en: "song", ko: "노래" },
+{ en: "feet", ko: "발" },
+{ en: "play", ko: "연주하다" },
+{ en: "sang", ko: "노래했다" },
+{ en: "children", ko: "아이들" }
+]
+},
   "s3-2-1": {
     stage: 3,
     unit: 2,
@@ -17,7 +125,6 @@ const STAGE3_BOOKS = {
       { en: "hiding", ko: "숨어 있는, 숨어 있기" }
     ]
   },
-
   "s3-2-2": {
     stage: 3,
     unit: 2,
@@ -36,7 +143,6 @@ const STAGE3_BOOKS = {
       { en: "looked", ko: "보았다" }
     ]
   },
-
   "s3-2-3": {
     stage: 3,
     unit: 2,
@@ -55,7 +161,6 @@ const STAGE3_BOOKS = {
       { en: "cowboy", ko: "카우보이" }
     ]
   },
-
   "s3-2-4": {
     stage: 3,
     unit: 2,
@@ -74,7 +179,6 @@ const STAGE3_BOOKS = {
       { en: "everyone", ko: "모두" }
     ]
   },
-
   "s3-2-5": {
     stage: 3,
     unit: 2,
@@ -93,7 +197,6 @@ const STAGE3_BOOKS = {
       { en: "home", ko: "집" }
     ]
   },
-
   "s3-2-6": {
     stage: 3,
     unit: 2,
@@ -112,7 +215,6 @@ const STAGE3_BOOKS = {
       { en: "get", ko: "가져오다" }
     ]
   },
-  
 "s3-3-1": {
   stage: 3,
   unit: 3,
@@ -131,7 +233,6 @@ const STAGE3_BOOKS = {
     { en: "fed up", ko: "지긋지긋한, 질린" }
   ]
 },
-
 "s3-3-2": {
   stage: 3,
   unit: 3,
@@ -169,7 +270,6 @@ const STAGE3_BOOKS = {
     { en: "bags", ko: "가방들" }
   ]
 },
-
 "s3-3-4": {
   stage: 3,
   unit: 3,
@@ -188,7 +288,6 @@ const STAGE3_BOOKS = {
     { en: "help", ko: "돕다" }
   ]
 },
-
 "s3-3-5": {
   stage: 3,
   unit: 3,
@@ -207,7 +306,6 @@ const STAGE3_BOOKS = {
     { en: "painted", ko: "칠했다" }
   ]
 },
-
 "s3-3-6": {
   stage: 3,
   unit: 3,
