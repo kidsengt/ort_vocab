@@ -247,7 +247,7 @@ words: [
     { en: "locked", ko: "잠겨 있었다" },
     { en: "forgot", ko: "잊었다" },
     { en: "ice cream", ko: "아이스크림" },
-    { en: "put", ko: "넣었" },
+    { en: "put", ko: "넣었다" },
     { en: "ran over", ko: "깔고 지나갔다" }
   ]
 },
@@ -284,7 +284,7 @@ words: [
     { en: "broke down", ko: "고장 났다" },
     { en: "tractor", ko: "트랙터" },
     { en: "farmer", ko: "농부" },
-    { en: "stay", ko: "머물" },
+    { en: "stay", ko: "머물다" },
     { en: "help", ko: "돕다" }
   ]
 },
@@ -323,5 +323,114 @@ words: [
     { en: "made", ko: "만들었다" },
     { en: "fell off", ko: "떨어졌다" }
   ]
+}
+  ,
+"s3-4-1": {
+stage: 3,
+unit: 4,
+book: 1,
+title: "The Barbecue",
+words: [
+{ en: "made", ko: "만들었다" },
+{ en: "lit", ko: "불을 붙였다" },
+{ en: "fire", ko: "불" },
+{ en: "went out", ko: "불이 꺼졌다" },
+{ en: "began", ko: "시작했다" },
+{ en: "rain", ko: "비가 내린다" },
+{ en: "cooked", ko: "요리했다" },
+{ en: "burgers", ko: "햄버거들" },
+{ en: "burned", ko: "탔다" },
+{ en: "got wet", ko: "젖었다" }
+]
+},
+"s3-4-2": {
+stage: 3,
+unit: 4,
+book: 2,
+title: "The Carnival",
+words: [
+{ en: "made", ko: "만들었다" },
+{ en: "put", ko: "놓았다 / 올렸다" },
+{ en: "dressed up", ko: "변장했다" },
+{ en: "took", ko: "가져갔다" },
+{ en: "pushed", ko: "밀었다" },
+{ en: "broke down", ko: "고장났다" },
+{ en: "giant", ko: "아주 큰" },
+{ en: "trailer", ko: "트레일러 (짐을 싣는 차)" },
+{ en: "shoe", ko: "신발" },
+{ en: "busy", ko: "바빴다" }
+]
+},
+"s3-4-3": {
+stage: 3,
+unit: 4,
+book: 3,
+title: "At the Pool",
+words: [
+{ en: "swimming pool", ko: "수영장" },
+{ en: "trunks", ko: "수영복" },
+{ en: "took", ko: "데려갔다" },
+{ en: "went", ko: "갔다" },
+{ en: "looked for", ko: "찾았다" },
+{ en: "couldn’t find", ko: "찾을 수 없었다" },
+{ en: "couldn’t go in", ko: "들어갈 수 없었다" },
+{ en: "bought", ko: "샀다" },
+{ en: "went back", ko: "다시 갔다" },
+{ en: "put on", ko: "입었다" }
+]
+},
+"s3-4-4": {
+stage: 3,
+unit: 4,
+book: 4,
+title: "Bull's-eye!",
+words: [
+{ en: "wanted to", ko: "~하고 싶었다" },
+{ en: "won", ko: "이겼다 / 얻었다" },
+{ en: "kicked", ko: "찼다" },
+{ en: "bull’s-eye", ko: "정중앙 / 과녁 한가운데" },
+{ en: "goldfish", ko: "금붕어" },
+{ en: "forgot", ko: "잊었다" },
+{ en: "watch", ko: "보다" },
+{ en: "fight", ko: "싸움 / 싸웠다" },
+{ en: "bumped into", ko: "부딪혔다" },
+{ en: "cross", ko: "화가 난" }
+]
+},
+"s3-4-5": {
+stage: 3,
+unit: 4,
+book: 5,
+title: "Book Week",
+words: [
+{ en: "made", ko: "만들었다" },
+{ en: "put", ko: "붙였다 / 놓았다" },
+{ en: "came", ko: "왔다" },
+{ en: "dressed up", ko: "변장했다" },
+{ en: "caterpillar", ko: "애벌레" },
+{ en: "ate", ko: "먹었다" },
+{ en: "everyone", ko: "모두" },
+{ en: "lettuce", ko: "상추" },
+{ en: "book party", ko: "책 파티" },
+{ en: "book sale", ko: "책 판매" }
+]
+},
+"s3-4-6": {
+stage: 3,
+unit: 4,
+book: 6,
+title: "The Cold Day",
+words: [
+{ en: "were", ko: "~에 있었다 / ~한 상태였다" },
+{ en: "sea", ko: "바다" },
+{ en: "waves", ko: "파도" },
+{ en: "cold", ko: "추운" },
+{ en: "laugh", ko: "웃다" },
+{ en: "jog", ko: "조깅하다" },
+{ en: "sat", ko: "앉았다" },
+{ en: "rug", ko: "깔개" },
+{ en: "ran", ko: "달렸다" },
+{ en: "looked at", ko: "~을 바라보았다" }
+]
 }
 };
