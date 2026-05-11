@@ -1,4 +1,27 @@
 const STAGE4_BOOKS = {
+  "s4-1-1": {
+stage: 4,
+unit: 1,
+book: 1,
+title: "House for sale",
+words: [
+{ en: "house", ko: "집" },
+{ en: "for sale", ko: "팔려고 나온, 매물인" },
+{ en: "looked at", ko: "살펴보았다" },
+{ en: "wallpaper", ko: "벽지" },
+{ en: "room", ko: "방" },
+{ en: "looked up", ko: "올려다보았다" },
+{ en: "chimney", ko: "굴뚝" },
+{ en: "bedroom", ko: "침실" },
+{ en: "jumped on", ko: "위로 뛰어올랐다" },
+{ en: "chair", ko: "의자" },
+{ en: "went down", ko: "아래로 갔다, 내려갔다" },
+{ en: "garden", ko: "정원" },
+{ en: "tree house", ko: "나무집" },
+{ en: "climbed", ko: "올라갔다" },
+{ en: "pulled down", ko: "끌어내렸다" }
+]
+},
 "s4-2-1": {
 stage: 4,
 unit: 2,
