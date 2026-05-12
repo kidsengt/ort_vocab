@@ -113,5 +113,28 @@ words: [
 { en: "surprise", ko: "놀라움" },
 { en: "everyone", ko: "모두" }
 ]
+},
+"s4-2-5": {
+stage: 4,
+unit: 2,
+book: 5,
+title: "The Wedding",
+words: [
+{ en: "weadding", ko: "결혼식" },
+{ en: "married", ko: "결혼하는" },
+{ en: "happy", ko: "행복한" },
+{ en: "bridesmaid", ko: "신부 들러리" },
+{ en: "unhappy", ko: "불행한, 속상한" },
+{ en: "pageboy", ko: "페이지보이" },
+{ en: "journey", ko: "여행" },
+{ en: "dress", ko: "드레스" },
+{ en: "cake", ko: "케이크" },
+{ en: "joke", ko: "농담" },
+{ en: "day", ko: "날" },
+{ en: "video", ko: "비디오" },
+{ en: "photograph", ko: "사진" },
+{ en: "suit", ko: "정장" },
+{ en: "party", ko: "파티" }
+]  
 }  
 };
