@@ -121,20 +121,20 @@ book: 5,
 title: "The Wedding",
 words: [
 { en: "weadding", ko: "결혼식" },
-{ en: "married", ko: "결혼하는" },
-{ en: "happy", ko: "행복한" },
-{ en: "bridesmaid", ko: "신부 들러리" },
-{ en: "unhappy", ko: "불행한, 속상한" },
-{ en: "pageboy", ko: "페이지보이" },
+{ en: "getting married", ko: "결혼하는" },
+{ en: "grandparents", ko: "조부모님" },
+{ en: "bridesmaid", ko: "신부 옆 역할" },
 { en: "journey", ko: "여행" },
-{ en: "dress", ko: "드레스" },
-{ en: "cake", ko: "케이크" },
-{ en: "joke", ko: "농담" },
-{ en: "day", ko: "날" },
-{ en: "video", ko: "비디오" },
+{ en: "pageboy", ko: "결혼식 보조 남자아이" },
+{ en: "material", ko: "천" },
+{ en: "measurements", ko: "치수" },
+{ en: "surprise", ko: "깜짝선물" },
+{ en: "joke", ko: "장난" },
+{ en: "glad", ko: "기쁜" },
+{ en: "video", ko: "영상" },
 { en: "photograph", ko: "사진" },
 { en: "suit", ko: "정장" },
-{ en: "party", ko: "파티" }
+{ en: "danced", ko: "춤췄다" }
 ]  
 }  
 };
