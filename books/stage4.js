@@ -22,6 +22,29 @@ words: [
 { en: "pulled down", ko: "끌어내렸다" }
 ]
 },
+"s4-1-2": {
+stage: 4,
+unit: 1,
+book: 2,
+title: "The New House",
+words: [
+{ en: "van", ko: "밴" },
+{ en: "came", ko: "왔다" },
+{ en: "things", ko: "물건들" },
+{ en: "a lot of", ko: "많은" },
+{ en: "helped", ko: "도와주었다" },
+{ en: "put", ko: "넣었다" },
+{ en: "go-kart", ko: "고카트" },
+{ en: "box", ko: "상자" },
+{ en: "goodbye", ko: "안녕" },
+{ en: "play", ko: "놀다" },
+{ en: "soon", ko: "곧" },
+{ en: "went", ko: "갔다" },
+{ en: "new", ko: "새로운" },
+{ en: "job", ko: "일, 수고" },
+{ en: "toys", ko: "장난감들" }
+]
+},
 "s4-2-1": {
 stage: 4,
 unit: 2,
