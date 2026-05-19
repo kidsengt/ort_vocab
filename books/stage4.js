@@ -45,6 +45,29 @@ words: [
 { en: "toys", ko: "장난감들" }
 ]
 },
+"s4-1-3": {
+stage: 4,
+unit: 1,
+book: 3,
+title: "Come In!",
+words: [
+{ en: "painting", ko: "페인트칠하는 중인" },
+{ en: "door", ko: "문" },
+{ en: "came", ko: "왔다" },
+{ en: "play", ko: "놀다" },
+{ en: "children", ko: "아이들" },
+{ en: "house", ko: "집" },
+{ en: "wanted", ko: "원했다" },
+{ en: "home", ko: "집으로" },
+{ en: "a lot of", ko: "많은" },
+{ en: "mess", ko: "엉망 / 어질러진 상태" },
+{ en: "looked for", ko: "찾았다" },
+{ en: "watching", ko: "보고 있는 중인" },
+{ en: "television", ko: "텔레비전" },
+{ en: "gave", ko: "주었다" },
+{ en: "biscuits", ko: "비스킷" }
+]
+},
 "s4-2-1": {
 stage: 4,
 unit: 2,
