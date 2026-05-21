@@ -159,7 +159,7 @@ words: [
 { en: "surprise", ko: "놀라움" },
 { en: "everyone", ko: "모두" }
 ]
-},
+},  
 "s4-2-5": {
 stage: 4,
 unit: 2,
@@ -182,5 +182,28 @@ words: [
 { en: "suit", ko: "정장" },
 { en: "danced", ko: "춤췄다" }
 ]  
-}  
+},  
+"s4-2-6": {
+stage: 4,
+unit: 2,
+book: 6,
+title: "The Weather Vane",
+words: [
+{ en: "building site", ko: "공사장" },
+{ en: "crane", ko: "크레인" },
+{ en: "cab", ko: "운전석" },
+{ en: "van", ko: "밴" },
+{ en: "weather vane", ko: "풍향계" },
+{ en: "back", ko: "뒤쪽" },
+{ en: "idea", ko: "생각" },
+{ en: "jumped over", ko: "뛰어넘었다" },
+{ en: "careful", ko: "조심하는" },
+{ en: "photograph", ko: "사진" },
+{ en: "roof", ko: "지붕" },
+{ en: "tall story", ko: "과장된 이야기" },
+{ en: "looked at", ko: "바라보았다" },
+{ en: "spoke to", ko: "~에게 말했다" },
+{ en: "took", ko: "찍었다, 가져갔다" }
+]
+},  
 };
