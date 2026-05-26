@@ -205,5 +205,28 @@ words: [
 { en: "spoke to", ko: "~에게 말했다" },
 { en: "took", ko: "찍었다, 가져갔다" }
 ]
-},  
+}, 
+ "s4-4-1": {
+stage: 4,
+unit: 4,
+book: 1,
+title: "Dad's Jacket",
+words: [
+{ en: "jacket", ko: "재킷" },
+{ en: "poster", ko: "포스터" },
+{ en: "plants", ko: "식물들" },
+{ en: "outside", ko: "밖에" },
+{ en: "made", ko: "만들었다" },
+{ en: "put on", ko: "입었다" },
+{ en: "looked for", ko: "찾았다" },
+{ en: "ran after", ko: "뒤쫓아갔다" },
+{ en: "bought", ko: "샀다" },
+{ en: "gave", ko: "주었다" },
+{ en: "fit", ko: "잘 맞는 크기" },
+{ en: "game", ko: "게임" },
+{ en: "clothes", ko: "옷들" },
+{ en: "pounds", ko: "파운드" },
+{ en: "Children in Need", ko: "어린이 돕기 행사" }
+]
+},
 };
