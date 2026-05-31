@@ -68,6 +68,29 @@ words: [
 { en: "biscuits", ko: "비스킷" }
 ]
 },
+"s4-1-4": {
+stage: 4,
+unit: 1,
+book: 4,
+title: "The Secret Room",
+words: [
+{ en: "wallpaper", ko: "벽지" },
+{ en: "secret", ko: "비밀" },
+{ en: "found", ko: "발견했다" },
+{ en: "stuck", ko: "움직이지 않는 / 꽉 끼인" },
+{ en: "inside", ko: "안쪽에" },
+{ en: "went into", ko: "안으로 들어갔다" },
+{ en: "looked at", ko: "바라보았다" },
+{ en: "pulled off", ko: "떼어냈다" },
+{ en: "opened", ko: "열었다" },
+{ en: "little house", ko: "작은 집" },
+{ en: "looks like", ko: "~처럼 보인다" },
+{ en: "little dog", ko: "작은 강아지" },
+{ en: "everyone", ko: "모두" },
+{ en: "fast asleep", ko: "깊이 잠든" },
+{ en: "dreamed", ko: "꿈을 꾸었다" }
+]
+},
 "s4-2-1": {
 stage: 4,
 unit: 2,
@@ -227,6 +250,29 @@ words: [
 { en: "clothes", ko: "옷들" },
 { en: "pounds", ko: "파운드" },
 { en: "Children in Need", ko: "어린이 돕기 행사" }
+]
+},
+ "s4-4-2": {
+stage: 4,
+unit: 4,
+book: 2,
+title: "Stuck in the Mud",
+words: [
+{ en: "muddy", ko: "진흙투성이의" },
+{ en: "path", ko: "길" },
+{ en: "walk", ko: "산책" },
+{ en: "sheep", ko: "양" },
+{ en: "stuck", ko: "꼼짝 못하는 / 갇힌" },
+{ en: "mud", ko: "진흙" },
+{ en: "couldn't", ko: "~할 수 없었다" },
+{ en: "deep", ko: "깊은" },
+{ en: "help", ko: "돕다" },
+{ en: "sank", ko: "빠져들어갔다" },
+{ en: "pushed", ko: "밀었다" },
+{ en: "pulled", ko: "당겼다" },
+{ en: "got out", ko: "빠져나왔다" },
+{ en: "boot", ko: "장화" },
+{ en: "lost", ko: "잃어버렸다" }
 ]
 },
 };
