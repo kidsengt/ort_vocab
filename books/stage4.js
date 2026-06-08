@@ -91,6 +91,29 @@ words: [
 { en: "dreamed", ko: "꿈을 꾸었다" }
 ]
 },
+"s4-1-5": {
+stage: 4,
+unit: 1,
+book: 5,
+title: "The Play",
+words: [
+{ en: "story time", ko: "이야기 시간" },
+{ en: "wizard", ko: "마법사" },
+{ en: "storm", ko: "폭풍" },
+{ en: "There was", ko: "~가 있었다" },
+{ en: "wind", ko: "바람" },
+{ en: "blew away", ko: "날려 보냈다" },
+{ en: "scarecrow", ko: "허수아비" },
+{ en: "witch", ko: "마녀" },
+{ en: "met", ko: "만났다" },
+{ en: "outside", ko: "밖에서" },
+{ en: "couldn't", ko: "~할 수 없었다" },
+{ en: "play", ko: "연극" },
+{ en: "painted", ko: "페인트칠했다" },
+{ en: "fun", ko: "재미" },
+{ en: "class", ko: "반" }
+]
+},
 "s4-2-1": {
 stage: 4,
 unit: 2,
