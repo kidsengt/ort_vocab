@@ -298,4 +298,27 @@ words: [
 { en: "lost", ko: "잃어버렸다" }
 ]
 },
+"s4-4-3": {
+stage: 4,
+unit: 4,
+book: 3,
+title: "The Den",
+words: [
+{ en: "idea", ko: "생각" },
+{ en: "found", ko: "발견했다" },
+{ en: "sticks", ko: "막대기들 / 나뭇가지들" },
+{ en: "branches", ko: "나뭇가지들" },
+{ en: "straw", ko: "짚" },
+{ en: "logs", ko: "통나무들" },
+{ en: "couldn't", ko: "~할 수 없었다" },
+{ en: "den", ko: "비밀 아지트" },
+{ en: "make", ko: "만들다" },
+{ en: "began", ko: "시작했다" },
+{ en: "some", ko: "몇몇의 / 약간의" },
+{ en: "splashed", ko: "튀었다" },
+{ en: "stopped", ko: "멈췄다" },
+{ en: "went back", ko: "다시 돌아갔다" },
+{ en: "getting wet", ko: "젖고 있는" }
+]
+},
 };
