@@ -432,5 +432,23 @@ words: [
 { en: "ran", ko: "달렸다" },
 { en: "looked at", ko: "~을 바라보았다" }
 ]
+},
+"s3-5-1": {
+stage: 3,
+unit: 5,
+book: 1,
+title: "Dragons!",
+words: [
+{ en: "went", ko: "갔다" },
+{ en: "woods", ko: "숲" },
+{ en: "make", ko: "만들다" },
+{ en: "wigwam", ko: "위그웜텐트" },
+{ en: "sticks", ko: "나뭇가지들" },
+{ en: "look at", ko: "~을 바라보았다" },
+{ en: "see", ko: "보다 / 알다" },
+{ en: "dragon", ko: "용" },
+{ en: "play", ko: "연극" },
+{ en: "sang", ko: "노래했다" }
+]  
 }
 };
