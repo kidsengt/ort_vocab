@@ -114,6 +114,29 @@ words: [
 { en: "class", ko: "반" }
 ]
 },
+"s4-1-6": {
+stage: 4,
+unit: 1,
+book: 6,
+title: "The Storm",
+words: [
+{ en: "mended", ko: "고쳤다" },
+{ en: "roof", ko: "지붕" },
+{ en: "painted", ko: "페인트칠했다" },
+{ en: "climbed", ko: "올라갔다" },
+{ en: "storm", ko: "폭풍" },
+{ en: "There was", ko: "~가 있었다" },
+{ en: "blew", ko: "불었다" },
+{ en: "came down", ko: "쏟아졌다" },
+{ en: "looked at", ko: "바라보았다" },
+{ en: "had a party", ko: "파티를 했다" },
+{ en: "found", ko: "발견했다" },
+{ en: "inside", ko: "안에" },
+{ en: "wanted", ko: "원했다" },
+{ en: "walls", ko: "벽들" },
+{ en: "was down", ko: "쓰러져있었다" }
+]
+},
 "s4-2-1": {
 stage: 4,
 unit: 2,
