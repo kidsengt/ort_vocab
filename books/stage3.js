@@ -449,6 +449,24 @@ words: [
 { en: "dragon", ko: "용" },
 { en: "play", ko: "연극" },
 { en: "sang", ko: "노래했다" }
-]  
+] 
+},
+"s3-5-2": {
+stage: 3,
+unit: 5,
+book: 2,
+title: "Helicopter Rescue",
+words: [
+{ en: "helicopter", ko: "헬리콥터" },
+{ en: "rescue", ko: "구조" },
+{ en: "cockpit", ko: "조종석" },
+{ en: "winch", ko: "윈치 / 끌어올리는 장치" },
+{ en: "call-out", ko: "긴급 출동 요청" },
+{ en: "rock", ko: "바위" },
+{ en: "hurt", ko: "다쳤다 / 아팠다" },
+{ en: "took off", ko: "이륙했다" },
+{ en: "went", ko: "갔다" },
+{ en: "took", ko: "데려갔다 / 가져갔다" }
+]
 }
 };
